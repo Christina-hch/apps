@@ -1,0 +1,78 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh;
+    font-family: arial;
+    background: #2ecc71;
+    background-image: linear-gradient(to top left, #2980b9, #16a085, #2ecc71);
+    position: relative;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+.score{
+    margin: 10px;
+    padding-top: 20px;
+    text-align: center;
+    height: 40px;
+    left:50%;
+    font-size: 20px;
+}
+.table{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    height: 200px;
+    width: 200px;
+    flex-wrap: wrap;
+    background-color: rgb(232, 235, 235);
+    margin: auto;
+    border: 2px solid green;
+    justify-content: flex-start;
+}
+.table div{
+    height: 20px;
+    width: 20px;
+    border: solid 1px gray;
+    box-sizing: border-box;
+}
+.snake{
+    background-color: darkcyan;
+}
+.apple{
+    background-color: crimson;
+    border-radius: 5px;
+}
+.modul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,0.5);
+    text-align: center;
+  }
+  .panel {
+    background: rgba(256,256,256,1);
+    padding: 40px 60px;
+    box-shadow: 0 0 2px 3px rgba(0,0,0,0.3);
+    border-radius: 2px;
+  }
+  .panel span{
+    /* margin: 10px auto; */
+    display: flex;
+    padding: 20px;
+    border: 1px solid green;
+    font-size: 20px;
+    cursor: pointer;
+} 
+.panel span:hover{
+    color: white;
+    background-color: #16a085;
+}

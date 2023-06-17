@@ -1,0 +1,113 @@
+
+body {
+    background-color: rgb(10,10,51);
+    display: flex;
+    flex: 1;
+    align-items: center;
+    margin: 0;
+    min-height: 100vh;
+  }
+  .clock{
+    margin:20px auto;
+    background-color: rgb(25, 25, 88);
+    padding: 10px;
+    height: 20rem;
+    width:20rem;
+    border:7px solid rgba(111, 1, 111, 0.442);
+    position:relative;
+    border-radius:50%;
+    box-shadow: inset -4px -4px 10px rgba(200,200,200,0.5), -4px -4px 10px rgba(200,200,200,0.5),inset 4px 4px 10px rgba(0,0,0,0.5), 4px 4px 10px rgba(0,0,0,0.5);
+  }
+  .outer-clock-face {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+  }
+  
+  .outer-clock-face::after{
+    transform: rotate(90deg);
+  }
+
+  .outer-clock-face::before,.outer-clock-face::after,
+  .outer-clock-face .marking{
+    content: '';
+    position: absolute;
+    background-color: rgb(34, 75, 255);
+    width: 5px;
+    height: 100%;
+    left:49%;
+    z-index: 0;
+    border-radius: 30%;
+  }
+
+  .outer-clock-face .marking{
+    width: 3px;
+    background-color: #a1aeb4;
+  }
+
+  .outer-clock-face .marking.marking-one{
+    transform: rotate(30deg);
+  }
+  .outer-clock-face .marking.marking-two{
+    transform: rotate(60deg);
+  }
+  .outer-clock-face .marking.marking-three{
+    transform: rotate(120deg);
+  }
+  .outer-clock-face .marking.marking-four{
+    transform: rotate(150deg);
+  }
+  .inner-clock-face{
+    background-color: rgb(25, 25, 88);
+    position:absolute;
+    border-radius: 100%;
+    z-index: 1;
+    left: 10%;
+    top: 10%;
+    width: 80%;
+    height: 80%;
+  }
+
+  .inner-clock-face::before{
+    content: "";
+    background-color: rgb(111, 1, 111);
+    position: absolute;
+    left: 49%;
+    top: 50%;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    z-index: 11;
+  }
+
+  .hand{
+    left:50%;
+    top: 50%;
+    position: absolute;
+    z-index: 3;
+    border-radius: 6px;
+    transform-origin: 50% 0%;
+    transform: rotate(180deg);
+    transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+  }
+  .hand.hour{
+    background-color: white;
+    height: 16%;
+    width: 5px;
+    z-index: 5;
+  }
+  .hand.minute{
+    background-color: rgb(34, 75, 255);
+    height: 25%;
+    width: 3px;
+    z-index: 4;
+    border-radius: 50%;
+  }
+  .hand.second{
+    background-color: blueviolet;
+    height: 35%;
+    border-radius: 50%;
+    width: 2px;
+  }
